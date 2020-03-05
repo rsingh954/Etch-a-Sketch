@@ -1,0 +1,15 @@
+#container{
+    border-style: solid;
+    display: flex;
+    height: 895px;
+    width: 100%;
+}
+
+.row{
+    border-style: solid;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
