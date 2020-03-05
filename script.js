@@ -9,3 +9,5 @@ function gridRow(rowNum) {
         createRow.className = 'row';
     }
 }
+
+gridRow(16);
