@@ -1,15 +1,17 @@
 #container{
     border-style: solid;
-    display: flex;
-    height: 20px;
-    width: 100%;
+    display: grid;
+    height: 80vh;
+    width: 80vw;
 }
+
 
 .row{
     border-style: solid;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
-
 }
 
+
+body{
+    margin: 0;
+}
