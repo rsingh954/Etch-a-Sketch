@@ -20,6 +20,7 @@ function createNewGrid() {
     let n = parseInt(newGrid);
     if(isNaN(n)){ 
         alert("ERROR: Please only enter a whole number. (i.e. 32) ");
+        newGrid = 16;
     };
     gridRow(parseInt(newGrid));
     return parseInt(newGrid);
@@ -49,14 +50,20 @@ function mouseEvent() {
     rows.forEach((row) => {
         row.addEventListener('mouseover', (e) => {
             row.classList.add('draw');
+            row.addEventListener('click', (e)=>{
+                row.classList.toggle('removeDraw');
+            })
         })
     })
 }
+
+
 
 function clearSketch() {
     let activeCell = document.querySelectorAll('div.draw');
     activeCell.forEach((cell) => {
         cell.classList.remove('draw');
+        cell.classList.remove('removeDraw');
     })
 
 }

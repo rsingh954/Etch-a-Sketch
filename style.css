@@ -19,6 +19,10 @@
 .draw{
     background-color: black;
 }
+
+.removeDraw{
+    background-color: white;
+}
 body{
     margin: 0;
 }
