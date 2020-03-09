@@ -17,7 +17,12 @@ function clearGrid() {
 function createNewGrid() {
     clearGrid();
     let newGrid = prompt("How many rows and columns do you want? (Enter one number): ");
-    gridRow(newGrid);
+    let n = parseInt(newGrid);
+    if(isNaN(n)){ 
+        alert("ERROR: Please only enter a whole number. (i.e. 32) ");
+    };
+    gridRow(parseInt(newGrid));
+    return parseInt(newGrid);
 
 }
 
