@@ -51,8 +51,17 @@ body{
     visibility: hidden;
 }
 .btn{
+    
     margin-top: .5%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+button{
+    color: white;
+    width: 300px;
+    height: 30px;
+    background-color: #051622;
+    border-color: #deb992;
 }
