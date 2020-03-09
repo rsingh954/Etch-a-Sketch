@@ -1,18 +1,19 @@
 const div = document.getElementById('container');
 const button = document.querySelector('.button');
-
+var randomColor = Math.floor(Math.random()*16777215).toString(16);
 //clear the grid
 function clearGrid() {
     let cells = document.querySelectorAll('div.row');
     for (i = cells.length - 1; i >= 0; i--) {
         div.removeChild(div.childNodes[i + 1]);
     }
+    //clearing leaves one div for some reason
     if (cells.childNodes > 0) {
-        console.log('wo');
         div.removeChild(div.childNodes[0]);
     }
 
 }
+
 
 function createNewGrid() {
     clearGrid();
@@ -41,6 +42,7 @@ function gridRow(rowNum) {
     }
     mouseEvent();
 }
+
 //default grid size
 gridRow(16);
 
@@ -50,7 +52,8 @@ function mouseEvent() {
     rows.forEach((row) => {
         row.addEventListener('mouseover', (e) => {
             row.classList.add('draw');
-
+            row.style.backgroundColor = '#051622';
+            console.log(randomColor);
         })
     })
 }
@@ -62,6 +65,13 @@ function clearSketch() {
     activeCell.forEach((cell) => {
         cell.classList.remove('draw');
         cell.classList.remove('removeDraw');
+
+
+        cell.style.backgroundColor = 'white';
+
+        
     })
 
 }
+
+
