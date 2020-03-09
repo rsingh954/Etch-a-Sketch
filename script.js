@@ -21,10 +21,11 @@ function createNewGrid() {
 
 }
 
-gridRow(16);
+
 
 //This makes the rows and we used inline styles to cofigure the grid. We used inline stlyes so we can pass the parameter through backticks
 function gridRow(rowNum) {
+
     for (i = 0; i < rowNum * rowNum; i++) {
         let createRow = document.createElement('div');
         div.appendChild(createRow);
@@ -35,7 +36,7 @@ function gridRow(rowNum) {
     mouseEvent();
 }
 //default grid size
-
+gridRow(16);
 
 //Need a mouse over event
 function mouseEvent() {
