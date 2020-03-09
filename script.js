@@ -50,9 +50,7 @@ function mouseEvent() {
     rows.forEach((row) => {
         row.addEventListener('mouseover', (e) => {
             row.classList.add('draw');
-            row.addEventListener('click', (e)=>{
-                row.classList.toggle('removeDraw');
-            })
+
         })
     })
 }
