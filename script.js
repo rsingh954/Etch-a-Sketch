@@ -1,6 +1,6 @@
 const div = document.getElementById('container');
 const button = document.querySelector('.button');
-var randomColor = Math.floor(Math.random()*16777215).toString(16);
+var randomColor ='#'+ Math.floor(Math.random()*16777215).toString(16);
 //clear the grid
 function clearGrid() {
     let cells = document.querySelectorAll('div.row');
@@ -32,7 +32,6 @@ function createNewGrid() {
 
 //This makes the rows and we used inline styles to cofigure the grid. We used inline stlyes so we can pass the parameter through backticks
 function gridRow(rowNum) {
-
     for (i = 0; i < rowNum * rowNum; i++) {
         let createRow = document.createElement('div');
         div.appendChild(createRow);
@@ -52,7 +51,7 @@ function mouseEvent() {
     rows.forEach((row) => {
         row.addEventListener('mouseover', (e) => {
             row.classList.add('draw');
-            row.style.backgroundColor = '#051622';
+            row.style.backgroundColor = '#'+e.clientX;
             console.log(randomColor);
         })
     })
@@ -73,5 +72,4 @@ function clearSketch() {
     })
 
 }
-
 
